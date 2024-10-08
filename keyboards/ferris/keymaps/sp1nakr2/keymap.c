@@ -90,16 +90,16 @@ enum custom_keycodes {          // Make sure have the awesome keycode ready
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_COLEMAK] = LAYOUT( /* QWERTY */
-    KC_Q  , KC_W  ,  KC_F  ,   KC_P ,    KC_B,         KC_J ,   KC_L ,   KC_U ,    KC_Y,KC_MINS ,
+    OE  , KC_W  ,  KC_F  ,   KC_P ,    KC_B,         KC_J ,   KC_L ,   KC_U ,    KC_Y, AA ,
     SFT_A , KC_R  , KC_S   ,   KC_T ,   KC_G ,         KC_M ,  KC_N , KC_E ,  KC_I ,  SFT_O , 
-    CTL_Z  , ALT_X ,  KC_C ,   KC_D,    KC_V,         KC_K ,   KC_H , KC_COMM, KC_DOT ,KC_SLSH , 
+    CTL_Z  , ALT_X ,  KC_C ,   KC_D,    KC_V,         KC_K ,   KC_H , KC_COMM, KC_DOT , AE , 
               KC_LCMD,LT(_LEFTTHUMB,KC_SPACE),       LT(_RTHUMB, KC_BSPC),LT(_FUNC,KC_TAB)
   ),
 
   [_LEFTTHUMB] = LAYOUT( /* [> LOWER <] */
-    KC_EXLM ,  KC_AT , KC_HASH, KC_DLR , KC_PERC,      KC_ESC,_______ ,_______ , _______ , _______,
-    KC_CIRC ,  AE    , OE   ,    AA    , KC_PIPE,      _______,KC_LEFT,KC_DOWN, KC_UP  , KC_RGHT,      
-    KC_TILDE,KC_AMPR,KC_PAST,KC_BSLS   , _______,      KC_GRV,KC_HOME,KC_PGDN, KC_PGUP, KC_END,
+    KC_EXLM ,  KC_AT , KC_HASH, KC_DLR , KC_PERC,      KC_ESC,_______ ,A(KC_RGHT) , A(KC_LEFT) , _______,
+LSFT_T(KC_CIRC) , KC_AMPR, KC_PAST,KC_BSLS , KC_PIPE,      _______,KC_LEFT,KC_DOWN, KC_UP  , KC_RGHT,      
+    KC_TILDE,KC_GRV,_______,_______   , KC_Q,       _______,_______,_______, _______, _______,
                                     KC_TRNS, KC_TRNS, ALT_TAB, LCMD(KC_GRV)  
   ),
 
